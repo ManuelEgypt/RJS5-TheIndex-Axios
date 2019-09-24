@@ -7,7 +7,9 @@ function BookRow(props) {
     <tr>
       <td>{book.title}</td>
       <td>
-        {author.first_name} {author.last_name}
+        {book.authors.map(author => (
+          <div>{author.name}</div>
+        ))}
       </td>
       <td>
         <button className="btn" style={{ backgroundColor: book.color }} />
